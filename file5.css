@@ -1,0 +1,39 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+.container
+{
+	background-color:gray;
+	width:100%;
+}
+.wrapper
+{
+	width:900px;
+	margin:auto;
+}
+.dark
+{
+background-color:#2d8659;	
+color:white;
+}
+.light
+{
+	background-color:#cccccc;
+}
+.logo_left
+{
+	margin-left:30px;
+}
+body{
+background-img:url("Capture.png");
+}
+h1{
+ color:black;
+ margin-left:400px;
+ }
+ h3{
+	 color:blue;
+	 font-size:40px;
+ }

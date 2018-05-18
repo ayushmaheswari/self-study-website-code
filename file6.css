@@ -1,0 +1,41 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#show ul
+{
+list-style:none;
+}
+#show ul li
+{
+background-color:#c2d6d6;
+width:250px;
+color:black;
+height:69px;
+line-height:69px;
+text-align:center;
+font-size:20px;
+position:relative;
+}
+
+#show ul li a
+{
+	text-decoration:none;
+	display:block;
+	color:black;
+}
+
+#show ul li a:hover
+{
+background-color:#476b6b;
+color:white;
+}
+
+#show2
+{
+	float:right;
+	width:1116px;
+	height:620px;
+	background-color:lightyellow;
+}

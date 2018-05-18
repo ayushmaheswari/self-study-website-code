@@ -1,0 +1,48 @@
+#one
+{
+width:795px;
+border-radius:5px;
+overflow:hidden;
+border:1px solid black;
+height:220px;
+margin-left:300px;
+}
+#two
+{
+position:relative;
+width:3200px;
+animation: slideranimation;
+animation-duration:20s;
+animation-iteration-count: infinite;
+}
+@keyframes slideranimation{
+
+  0%
+  {
+   left: 0px;
+  }
+  20%
+  {
+   left:0px;
+  }
+  25%
+  {
+   left:-800px;
+  }
+  45%
+  {
+  left:-800px;
+  }
+  50%
+  {
+  left: -1600px;
+  }
+  70%
+  {
+  left: -1600px;
+  }
+  75%
+  {
+  left: -2400px;
+  }
+}

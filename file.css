@@ -1,0 +1,161 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	font-family:vardana;
+}
+.container
+{
+	background-color:gray;
+	width:100%;
+}
+.wrapper
+{
+	width:900px;
+	margin:auto;
+}
+.dark
+{
+background-color:#2d8659;	
+color:white;
+}
+.light
+{
+	background:none;
+	background-color:gray;
+	opacity:.7;
+}
+.logo_left
+{
+	margin-left:30px;
+}
+#menu
+{
+	opacity:.7;
+    transition: .8s;
+}
+#menu ul
+{
+
+list-style:none;
+
+}
+#menu ul li
+{
+background-color:#d1b3ff;
+width:187.86px;
+height:50px;
+line-height:50px;
+text-align:center;
+float:left;
+font-size:20px;
+position:relative;
+}
+#menu ul li a
+{
+	text-decoration:none;
+	display:block;'
+	color:white;
+	 transition: .8s;
+}
+#menu ul li a:hover
+{
+background-color:#7575a3;
+color:white;
+
+
+}
+#menu ul ul 
+{
+	display:none
+}
+#menu ul li:hover > ul
+{
+	display:block;
+}
+#menu ul ul ul
+{
+	margin-left:187.86px;
+	margin-top:-50px;
+	position:absolute;
+}
+
+#one
+{
+width:550px;
+border-radius:15px;
+overflow:hidden;
+border:1px solid black;
+margin-right:5px;
+}
+#two
+{
+position:relative;
+width:2200px;
+animation: slideranimation;
+animation-duration:20s;
+animation-iteration-count: infinite;
+}
+#two img
+{
+float:left;
+}
+@keyframes slideranimation{
+
+  0%
+  {
+   left: 0px;
+  }
+  20%
+  {
+   left:0px;
+  }
+  25%
+  {
+   left:-550px;
+  }
+  45%
+  {
+  left:-550px;
+  }
+  50%
+  {
+  left: -1100px;
+  }
+  70%
+  {
+  left: -1100px;
+  }
+  75%
+  {
+  left: -1650px;
+  }
+ 
+}
+#test
+{
+	width:740px;
+	height:370px; 
+	border-radius:15px;
+	background-color:gray;
+	opacity:.7;
+	margin-right:10px;
+
+	
+}
+#test a
+{
+	font-size:27px;
+	text-decoration:none;
+	margin-left:60px;
+	color:white;
+}
+#down
+{
+	background-color:gray;
+	width:1330px;
+	height:220px;
+	margin-left:10px;
+    border-radius:15px;
+	opacity:.7;
+}
