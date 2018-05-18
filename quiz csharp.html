@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="log.jpg" type="image/jpg" />  
+<link type="text/css" rel="stylesheet" href="file3.css"/>
+<style>
+div#test{ 
+border:3px solid #c2d6d6; 
+padding:15px 60px 60px 60px; 
+margin-left:300px;
+margin-top:50px;
+background-color:#e0e0d1; 
+width:50%;
+}
+
+</style>
+
+<script type="text/javascript">
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+  ["Arrange the following datatype in order of increasing magnitude sbyte, short, long, int.", "long < short < int < sbyte", "sbyte < short < int < long", "short < sbyte < int < long", "B"],
+  ["Select a convenient declaration and initialization of a floating point number:", " float somevariable = 12.502D", "float somevariable = (Double) 12.502D", "float somevariable = (float) 12.502D", "C"],
+  ["What is the Size of ‘Char’ datatype?", "16bits", "8bits", "32bits", "A"],
+  ["Correct order of priorities are :", " ‘/’ > ‘%’ > ‘*’ > ‘+’", " ‘/’ > ‘*’ > ‘%’ > ‘+’", "‘*’ > ‘/’ > ‘%’ > ‘+’", "C"],
+  ["What is the most specified using class declaration ?", "type", "scope", "type & scope", "C"],
+  ["Which of these is not a correct statement?", "Recursion is always managed by C# Runtime environment", "Recursion always uses stack", "A recursive method must have a base case", "A"],
+  ["Wrong statement about enum used in C#.NET is?", "An enum can be declared inside a class", "An enum can have Single and Double values", "An enum can be declared outside a class", "B"],
+  ["Choose the operator/operators which is/are not used to access the [] operator in indexers?", "get", "access", "set", "B"],
+  ["Correct method to define + operator is?", "public abstract sample operator +(int a, int b)", "public abstract operator +(int a, int b)", "public static sample operator +(int a, int b)", "C"],
+  ["Which of the classes provide the operation of reading from and writing to the console in C#.NET?", "System.Console", "System.Output", "System.Array", "A"],
+  ];
+
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    
+    pos = 0;
+    correct = 0;
+    
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  test.innerHTML = "<h3>"+question+"</h3>";
+
+  test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+
+  if(choice == questions[pos][4]){
+    correct++;
+  }
+  pos++;
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body bgcolor="#c2d6d6">
+<h2 id="test_status" style="margin-left:500px; font-size:42px;" ></h2>
+<div id="test"></div></br></br>
+<div id="one">
+<div id="two">
+<img src="good luck.jpg"   width="795px" height="220px"/>
+<img src="good luck 1.jpg" width="795px" height="220px"/>
+<img src="good luck 2.jpg" width="795px" height="220px"/>
+<img src="good luck 3.jpg" width="795px" height="220px"/>
+</div>
+</div>
+</body>
+</html>

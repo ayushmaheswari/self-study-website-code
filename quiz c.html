@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="log.jpg" type="image/jpg" />  
+<link type="text/css" rel="stylesheet" href="file3.css"/>
+<style>
+div#test{ 
+border:3px solid #c2d6d6; 
+padding:15px 60px 60px 60px; 
+margin-left:300px;
+margin-top:50px;
+background-color:#e0e0d1; 
+width:50%;
+}
+
+</style>
+
+<script type="text/javascript">
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+  ["The format identifier ‘%i’ is also used for _____ data type?", "char", "int", "float", "B"],
+  ["Which data type is most suitable for storing a number 65000 in a 32-bit system?", "signed short", "unsigned short", "long", "B"],
+  ["What will be the data type of the expression (a < 50) ? var1 : var2;provided a = int, var1 = double, var2 = float?", "int", "float", "double", "C"],
+  ["Comment on the following pointer declaration?int *ptr, p;", "ptr is a pointer to integer, p is not", "ptr and p,", "ptr is a pointer to integer, p may or may not be", "A"],
+  ["The following code ‘for(;;)’ represents an infinite loop. It can be terminated by.", "exit(0)", " break", " both of the mentioned", "B"],
+  ["The correct syntax for running two variable for loop simultaneously is.", " for (i = 0; i < n; i++)</br> for (j = 0; j < n; j += 5)", " for (i = 0, j = 0;i < n, j < n; i++, j += 5)", " for (i = 0; i < n;i++){}</br>    for (j = 0; j < n;j += 5){}", "A"],
+  ["Which of the following cannot be used as LHS of the expression in for (exp1;exp2; exp3) ?", "Function", "variable", "macros", "C"],
+  ["Which is correct with respect to size of the datatypes?", " char > int > float", " int > char > float", " char < int < double", "C"],
+  ["Which of the datatypes have size that is variable?", " int", "struct", "float", "B"],
+  ["For which of the following, 'PI++;' code will fail?", "#define PI 3.14", "char *PI = “A”;", " float PI = 3.14;", "A"],
+  ];
+ 
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "   Test completed";
+    
+    pos = 0;
+    correct = 0;
+    
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  test.innerHTML = "<h3>"+question+"</h3>";
+
+  test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+
+  if(choice == questions[pos][4]){
+    correct++;
+  }
+  pos++;
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body bgcolor="#c2d6d6">
+
+<h2 id="test_status" style="margin-left:500px; font-size:42px;" ></h2>
+</div>
+<div id="test"></div></br></br>
+<div id="one">
+<div id="two">
+<img src="good luck.jpg"   width="795px" height="220px"/>
+<img src="good luck 1.jpg" width="795px" height="220px"/>
+<img src="good luck 2.jpg" width="795px" height="220px"/>
+<img src="good luck 3.jpg" width="795px" height="220px"/>
+</div>
+</div>
+</body>
+</html>

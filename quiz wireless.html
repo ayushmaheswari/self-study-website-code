@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="log.jpg" type="image/jpg" />  
+<link type="text/css" rel="stylesheet" href="file3.css"/>
+<style>
+div#test{ 
+border:3px solid #c2d6d6; 
+padding:15px 60px 60px 60px; 
+margin-left:300px;
+margin-top:50px;
+background-color:#e0e0d1; 
+width:50%;
+}
+
+</style>
+
+<script type="text/javascript">
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+  ["802.11 wireless networking uses what method as the media access method?", "CSMA/CD", " CTS/RTS", "CSMA/CA", "C"],
+  ["802.11 legacy specifies data rates of what?", "11 Mbps", "1 & 2Mbps ", " 5 Mbps", "B"],
+  ["What modulation technique does 802.11b wireless use?", " DSSS ", " FDSS", " FDSv", "A"],
+  [" 802.11g is downward compatible to what?", " 802.11a", " 802.11b ", " 802.11i", "B"],
+  [" In the USA, how many channels are available for 802.11b/g wireless networking?", "13", "11", "5", "B"],
+  [" When using 802.11b/g, what three channels would have the least interference?", "1, 2, & 3", " 2, 6 & 8", " 1,6, & 11 ", "C"],
+  ["802.11a runs on what frequency?", "  2.4Ghz", "4.8Ghz", "8.2Ghz", "A"],
+  ["802.11i provides what?", "Quality of service", " Double the speed", "Additional security", "C"],
+  ["WEP stands for what?", "Wired equivalency protocol", "Wired equivalent privacy", " Wireless encryption protocol", "B"],
+  ["802.11i is the same as what?", " WPA", "IPSEC", " WPA2  ", "C"]
+  ];
+
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    
+    pos = 0;
+    correct = 0;
+    
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  test.innerHTML = "<h3>"+question+"</h3>";
+
+  test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+
+  if(choice == questions[pos][4]){
+    correct++;
+  }
+  pos++;
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body bgcolor="#c2d6d6">
+<h2 id="test_status" style="margin-left:500px; font-size:42px;" ></h2>
+<div id="test"></div></br></br>
+<div id="one">
+<div id="two">
+<img src="good luck.jpg"   width="795px" height="220px"/>
+<img src="good luck 1.jpg" width="795px" height="220px"/>
+<img src="good luck 2.jpg" width="795px" height="220px"/>
+<img src="good luck 3.jpg" width="795px" height="220px"/>
+</div>
+</div>
+</body>
+</html>

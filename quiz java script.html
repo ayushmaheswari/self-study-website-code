@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="log.jpg" type="image/jpg" />  
+<link type="text/css" rel="stylesheet" href="file3.css"/>
+<style>
+div#test{ 
+border:3px solid #c2d6d6; 
+padding:15px 60px 60px 60px; 
+margin-left:300px;
+margin-top:50px;
+background-color:#e0e0d1; 
+width:50%;
+}
+
+</style>
+
+<script type="text/javascript">
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+  ["The meaning for Augmenting classes is that", "objects inherit prototype properties even in dynamic state", "objects inherit prototype properties only in dynamic state", "objects inherit prototype properties in static state", "A"],
+  ["objects inherit prototype properties in static state", "The interpreter stops its work", "The interpreter throws another exception", "The interpreter jumps to the nearest enclosing exception handler", "C"],
+  [" If you have a function f and an object o, you can define a method named m of o with", "o.m=m.f;", "o.m=f;", "o=f.m;", "A"],
+  ["When a class B can extend another class A, we say that", " B is the superclass and A is the subclass", "A is the superclass and B is the subclass", "A is the superclass and B is the subclass", "B"],
+  ["The functions provide() and require() of Dojo toolkit and Google’s Closure library are used for", "declaring and loading modules", "loading and declaring modules", "declaring modules", "A"],
+  ["Which are the forms of client-side storage?", "Web Databases", "FileSystem API and Offline Web Applications", "boath a nad b", "C"],
+  ["Which is the Microsoft’s own proprietary client-side storage?", "IE User Data", "Offline Web Applications", "cookies", "A"],
+  ["The URL property belongs to which of the following object?", "Element", "Documents", "Location", "B"],
+  ["If the window has child windows, how will the browsing histories be affected?", "Numerically interleaved", "Chronologically interleaved", "Both a and b", "B"],
+  [" What will happen if the browser encounters a script tag without an src attribute?", "Throws an error", "send it to compiler", "send it to interpreter", "C"],
+  ];
+
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    
+    pos = 0;
+    correct = 0;
+    
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  test.innerHTML = "<h3>"+question+"</h3>";
+
+  test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+
+  if(choice == questions[pos][4]){
+    correct++;
+  }
+  pos++;
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body bgcolor="#c2d6d6">
+<h2 id="test_status" style="margin-left:500px; font-size:42px;" ></h2>
+<div id="test"></div></br></br>
+<div id="one">
+<div id="two">
+<img src="good luck.jpg"   width="795px" height="220px"/>
+<img src="good luck 1.jpg" width="795px" height="220px"/>
+<img src="good luck 2.jpg" width="795px" height="220px"/>
+<img src="good luck 3.jpg" width="795px" height="220px"/>
+</div>
+</div>
+</body>
+</html>

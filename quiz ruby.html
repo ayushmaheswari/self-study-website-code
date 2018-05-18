@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="log.jpg" type="image/jpg" />  
+<link type="text/css" rel="stylesheet" href="file3.css"/>
+<style>
+div#test{ 
+border:3px solid #c2d6d6; 
+padding:15px 60px 60px 60px; 
+margin-left:300px;
+margin-top:50px;
+background-color:#e0e0d1; 
+width:50%;
+}
+
+</style>
+
+<script type="text/javascript">
+var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+var questions = [
+  ["Which of the following languages syntax matches with the Ruby’s syntax?", "Perl", "jquery", "PHP", "A"],
+  ["What is the size of an integer data type in ruby?", " -2pow30 to 2pow30", " -2pow30 to 2pow(30-1)", " -2pow60 to 2pow61", "B"],
+  ["Which of the following is the valid string method?", "The .length method", "The .irreverse method", "The upcase method", "B"],
+  ["What is the role of ! at the end of the capitalize method?", "It is the syntax for using capitalize method", "It indicates the termination of string", "It modifies the value stored in the variable", "C"],
+  ["What is the output of the given code?</br>“Ruby”.length #to find the length of given string", "4", " 4 to find the length of given string", "Ruby", "A"],
+  ["What error does the if condition gives if not terminated with end statement?", "Syntax error", "expecting keyword and unexpected end", "both a and b", "C"],
+  ["What is the use of else statement?", "When the if condition is false then the next else condition will get executed", "When the if condition is false and if else condition is true then only it will get executed", "When the if condition is false then the elsif condition will get executed", "B"],
+  ["What will the following expression evaluate to?</br>true || false", "true", "false", "error", "A"],
+  ["Objects of which class does the integer from the range -2^30 to 2^(30-1) belong to?", "Octal", "fixnum", "Binary", "B"],
+  ["What does the 1…10 indicate?", "Inclusive range", "Exclusive range", "both of them", "B"],
+  ];
+
+function get(x){
+  return document.getElementById(x);
+}
+function renderQuestion(){
+  test = get("test");
+  if(pos >= questions.length){
+    test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    get("test_status").innerHTML = "Test completed";
+    
+    pos = 0;
+    correct = 0;
+    
+    return false;
+  }
+  get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  question = questions[pos][0];
+  chA = questions[pos][1];
+  chB = questions[pos][2];
+  chC = questions[pos][3];
+  test.innerHTML = "<h3>"+question+"</h3>";
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+  test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+  test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+
+  choices = document.getElementsByName("choices");
+  for(var i=0; i<choices.length; i++){
+    if(choices[i].checked){
+      choice = choices[i].value;
+    }
+  }
+
+  if(choice == questions[pos][4]){
+    correct++;
+  }
+  pos++;
+  renderQuestion();
+}
+window.addEventListener("load", renderQuestion, false);
+</script>
+</head>
+<body bgcolor="#c2d6d6">
+<h2 id="test_status" style="margin-left:500px; font-size:42px;" ></h2>
+<div id="test"></div></br></br>
+<div id="one">
+<div id="two">
+<img src="good luck.jpg"   width="795px" height="220px"/>
+<img src="good luck 1.jpg" width="795px" height="220px"/>
+<img src="good luck 2.jpg" width="795px" height="220px"/>
+<img src="good luck 3.jpg" width="795px" height="220px"/>
+</div>
+</div>
+</body>
+</html>
