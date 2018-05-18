@@ -1,0 +1,32 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+#main
+{
+	background-color:#000066;
+	height:50px;
+}
+#once{
+	float:right;
+	line-height:50px;
+	margin-right:60px;
+	color:white;
+}
+#second
+{
+	float:right;
+}
+#first
+{
+	float:left;
+	margin-left:50px;
+	margin-top:20px;
+	
+}
+p
+{
+	font-size:20px;
+	margin-left:30px;
+}

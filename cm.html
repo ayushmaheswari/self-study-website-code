@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="C:\Users\Ayush\Documents\new website\images\log.jpg" type="image/jpg" />  
+<style>
+*
+{
+margin:0px;
+padding:0px
+}
+</style>
+</head>
+<body>
+<div style="margin-left:0px; font-size:35px; background-color:#222211; color:white; margin:0px; padding:0px; ">
+<p style="margin-left:540px;">
+<a href="index.html " style=" text-decoration:none; color:white; display:block; ">www.selfstudy.com</a>
+ </p>
+</div></br>
+<h1 style="margin-left:700px;">C</h1>
+<div style="margin-left:200px; background-color:lightyellow; margin-right:200px">
+<p>
+<h1> What is C? </h1>
+C is a general-purpose, high-level language that was originally developed by </br>
+Dennis M.Ritchie to develop the UNIX operating system at Bell Labs. C was </br>
+originally first implemented on the DEC PDP-11 computer in 1972.</br>
+
+<h3>C has now become a widely used professional language for various reasons −</h3>
+* Easy to learn</br>
+* Structured language</br>
+* It produces efficient programs</br>
+* It can handle low-level activities</br>
+* It can be compiled on a variety of computer platforms</br>
+
+<h3>Facts about C</h3>
+* C was invented to write an operating system called UNIX.</br>
+* C is a successor of B language which was introduced around the early 1970s.</br>
+* The language was formalized in 1988 by the American National Standard Institute (ANSI).</br>
+* The UNIX OS was totally written in C.</br>
+* Today C is the most widely used and popular System Programming Language.</br>
+* Most of the state-of-the-art software have been implemented using C.</br>
+* Today's most popular Linux OS and RDBMS MySQL have been written in C.</br>
+
+<h3>Why use C?</h3>
+C was initially used for system development work, particularly the programs that make-up</br>
+the operating system. C was adopted as a system development language because it produces </br>
+code that runs nearly as fast as the code written in assembly language. </br></br>
+Some examples of the use of C might be −</br>
+
+* Operating Systems</br>
+* Language Compilers</br>
+* Assemblers</br>
+* Text Editors</br>
+* Print Spoolers</br>
+* Network Drivers</br>
+* Modern Programs</br>
+* Databases</br>
+* Language Interpreters</br>
+* Utilities</br>
+
+<h2>Structure of c programe</h2>
+A C program basically consists of the following parts −</br>
+
+* Preprocessor Commands</br>
+* Functions</br>
+* Variables</br>
+* Statements & Expressions</br>
+* Comments</br></br>
+Example--</br></br>
+
+#include <stdio.h></br>
+int main() </br>
+{</br>
+   /* my first program in C */</br>
+   printf("Hello, World! \n");</br>
+   return 0;</br>
+}</br>
+
+<h2>Storage Classes</h3>
+A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. </br>
+They precede the type that they modify. We have four different storage classes in a C program −</br>
+<h4>The auto Storage Class</h4>
+The auto storage class is the default storage class for all local variables.</br></br>
+{</br>
+   int mount;</br>
+   auto int month;</br>
+}</br>
+
+<h4>The register Storage Class</h4>
+The register storage class is used to define local variables that should be stored in a register instead of RAM.</br>
+The register should only be used for variables that require quick access such as counters.</br></br>
+{</br>
+   register int  miles;</br>
+}</br>
+
+<h4>The static Storage Class</h4>
+The static storage class instructs the compiler to keep a local variable in existence during </br>
+the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope.</br>
+The static modifier may also be applied to global variables. When this is done, </br>
+it causes that variable's scope to be restricted to the file in which it is declared.</br>
+
+<h4>The extern Storage Class</h4>
+The extern storage class is used to give a reference of a global variable that is </br>
+visible to ALL the program files. When you use 'extern', the variable cannot be initialized</br> 
+however, it points the variable name at a storage location that has been previously defined.</br></br>
+#include <stdio.h></br>
+ int count ;</br>
+extern void write_extern();</br>
+main() {</br>
+   count = 5;</br>
+   write_extern();</br>
+}</br>
+
+<h2>LOOP TYPES</h2>
+	There may be a situation, when you need to execute a block of code several number of times.</br> 
+	In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</br>
+    Programming languages provide various control structures that allow for more complicated execution paths.</br>
+    A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement</br> 
+	in most of the programming languages −C++ programming language provides the following type of loops to handle looping requirements.</br>
+	
+	<h4>While loop</h4>
+    Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</br></br>
+    while(condition)</br> 
+	{statement(s);}</br>
+	
+	<h4>for loop</h4>
+    Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</br></br>
+    for ( init; condition; increment )</br> 
+	{statement(s);}</br>
+	
+	<h4>do...while loop</h4>
+    Like a ‘while’ statement, except that it tests the condition at the end of the loop body.</br></br>
+    do </br>
+	{statement(s);}</br> 
+    while( condition );</br>
+	
+	<h4>nested loops</h4>
+    You can use one or more loop inside any another ‘while’, ‘for’ or ‘do..while’ loop.</br></br>
+	
+	The syntax for a nested for loop statement in C++ is as follows −</br>
+    for ( init; condition; increment ) {</br>
+    for ( init; condition; increment ) {</br>
+    statement(s);</br>
+    }</br>
+    statement(s);</br>
+    }</br></br>
+
+	The syntax for a nested while loop statement in C++ is as follows −</br>
+
+    while(condition) {</br>
+    while(condition) {</br>
+    statement(s);</br>
+    }</br>
+    statement(s); // you can put more statements.}</br></br>
+    The syntax for a nested do...while loop statement in C++ is as follows −</br>
+    do </br>
+	{statement(s);</br>
+    do </br>
+	{  statement(s);} </br>
+	while( condition );</br>
+    } while( condition );<br></br>
+	
+	<h3>LOOP CONTROL STATEMENT</h3>
+	break statement</br>
+    Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.</br></br>
+
+	continue statement</br>
+    Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</br></br>
+
+	goto statement</br>
+    Transfers control to the labeled statement. Though it is not advised to use goto statement in your program.</br></br>
+	
+	<h3>THE INFINITY LOOP</h3>
+	A loop becomes infinite loop if a condition never becomes false.</br>
+	The for loop is traditionally used for this purpose. </br>
+	Since none of the three expressions that form the ‘for’ loop are required,</br> 
+	you can make an endless loop by leaving the conditional expression empty.</br></br>
+	
+	#include <iostream></br>
+    using namespace std;</br>
+    int main () {</br>
+    for( ; ; ) {</br>
+    printf("This loop will run forever.\n");}</br> 
+	return 0;}</br>
+	
+	<h3>UNION</h3>
+	A union is a special data type available in C that allows to store different data </br>
+	types in the same memory location. You can define a union with many members, but </br>
+	only one member can contain a value at any given time. Unions provide an efficient way</br> 
+	of using the same memory location for multiple-purpose.</br></br>
+	union Data {</br>
+   int i;</br>
+   float f;</br>
+   char str[20];</br>
+   } data;</br>
+
+</p>
+</div>
+</body>
+</html>

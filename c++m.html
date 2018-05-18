@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="C:\Users\Ayush\Documents\new website\images\log.jpg" type="image/jpg" />  
+<style>
+*
+{
+margin:0px;
+padding:0px
+}
+</style>
+</head>
+<body>
+<div style="margin-left:0px; font-size:35px; background-color:#222211; color:white; margin:0px; padding:0px; ">
+<p style="margin-left:540px;">
+<a href="index.html " style=" text-decoration:none; color:white; display:block; ">www.selfstudy.com</a>
+ </p>
+</div></br>
+<table>
+<h1 style="margin-left:700px;">C++</h1>
+   <div style="margin-left:200px; background-color:lightyellow; margin-right:200px">
+   <p>
+   <h1>What is C++?</h1>
+   
+   c++ is a general-purpose programing language.</br>
+   It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.</br>
+   C++ is a compiled language, with implementations of it available on many platforms.</br>
+   C++ is standardized by an ISO working group known as JTC1/SC22/WG21.</br> 
+   So far, it has published five revisions of the C++ standard and is currently working on the next revision, C++20.</br>
+   C++ inherits most of C's syntax.</br></br>
+   #include <iostream></br>
+   int main(){ </br>
+   std::cout << "Hello, world!\n";</br>
+   return 0;</br>
+   }</br>
+	
+	<h1>AUTOMATIC STORAGE </h1>
+	The most common variable types in C++ are local variables inside a function or block, and temporary variables.</br>
+	Local variables are created as the point of execution passes the declaration point. </br>
+	If the variable has a constructor or initializer this is used to define the initial state of the object.</br> 
+	Local variables are destroyed when the local block or function that they are declared in is closed.</br>
+	
+	<h1>DYNAMIC STORAGE</h1>
+	These objects have a dynamic lifespan and are created with a call to new and destroyed explicitly with a call to delete.</br>
+	
+	<h1>OBJECT</h1>
+	In the class based object oriented programming, object refer to a particular instance of a class where the object can</br>
+	be a combination of variable,function,and data structure.</br>
+	
+	<h1>LOOP TYPES</h1>
+	There may be a situation, when you need to execute a block of code several number of times.</br> 
+	In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</br>
+    Programming languages provide various control structures that allow for more complicated execution paths.</br>
+    A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement</br> 
+	in most of the programming languages −C++ programming language provides the following type of loops to handle looping requirements.</br>
+	
+	<h3>while loop</h3>
+    Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</br></br>
+    while(condition)</br> 
+	{statement(s);}</br>
+	
+	<h3>for loop</h3>
+    Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</br></br>
+    for ( init; condition; increment )</br> 
+	{statement(s);}</br>
+	
+	<h3>do...while loop</h3>
+    Like a ‘while’ statement, except that it tests the condition at the end of the loop body.</br></br>
+    do </br>
+	{statement(s);}</br> 
+    while( condition );</br>
+	
+	<h3>nested loops</h3>
+    You can use one or more loop inside any another ‘while’, ‘for’ or ‘do..while’ loop.</br></br>
+	
+	The syntax for a nested for loop statement in C++ is as follows −</br>
+    for ( init; condition; increment ) {</br>
+    for ( init; condition; increment ) {</br>
+    statement(s);</br>
+    }</br>
+    statement(s);</br>
+    }</br></br>
+
+	The syntax for a nested while loop statement in C++ is as follows −</br>
+
+    while(condition) {</br>
+    while(condition) {</br>
+    statement(s);</br>
+    }</br>
+    statement(s); // you can put more statements.}</br></br>
+    The syntax for a nested do...while loop statement in C++ is as follows −</br>
+    do </br>
+	{statement(s);</br>
+    do </br>
+	{  statement(s);} </br>
+	while( condition );</br>
+    } while( condition );<br></br>
+	
+	<h2>LOOP CONTROL STATEMENT</h2>
+	break statement</br>
+    Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.</br></br>
+
+	continue statement</br>
+    Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</br></br>
+
+	goto statement</br>
+    Transfers control to the labeled statement. Though it is not advised to use goto statement in your program.</br></br>
+	
+	<h2>THE INFINITY LOOP</h2>
+	A loop becomes infinite loop if a condition never becomes false.</br>
+	The for loop is traditionally used for this purpose. </br>
+	Since none of the three expressions that form the ‘for’ loop are required,</br> 
+	you can make an endless loop by leaving the conditional expression empty.</br></br>
+	
+	#include <iostream></br>
+    using namespace std;</br>
+    int main () {</br>
+    for( ; ; ) {</br>
+    printf("This loop will run forever.\n");}</br> 
+	return 0;}</br>
+	
+	<h1>ARRAYS</h1>
+	C++ provides a data structure, the array, which stores a fixed-size sequential collection </br>
+	of elements of the same type.An array is used to store a collection of data, </br>
+	but it is often more useful to think of an array as a collection of variables of the same type.</br>
+	To declare an array in C++, the programmer specifies the type of the </br>
+	elements and the number of elements required by an array as follows −</br>
+	type arrayName [ arraySize ];</br></br>
+	
+	*Multi-dimensional arrays</br>
+     C++ supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array.</br></br>
+
+	*Pointer to an array</br>
+     You can generate a pointer to the first element of an array by simply specifying the array name, without any index.</br></br>
+
+	*Passing arrays to functions</br>
+     You can pass to the function a pointer to an array by specifying the array's name without an index.</br></br>
+
+	*Return array from functions</br>
+     C++ allows a function to return an array.</br></br>
+	 
+	<h1>POINTER</h1>
+	A pointer is a variable whose value is the address of another variable.</br> 
+	Like any variable or constant, you must declare a pointer before you can work with it.</br> 
+	The general form of a pointer variable declaration is −</br></br>
+    type *var-name;</br></br>
+	Here, type is the pointer's base type; it must be a valid C++ type and var-name is the name of the pointer variable.</br></br>
+	int    *ip;    // pointer to an integer</br>
+    double *dp;    // pointer to a double</br>
+    float  *fp;    // pointer to a float</br>
+    char   *ch     // pointer to character</br></br>
+	
+	<h3>DIFFERENT POINTER IN C++</h3>
+	Null Pointers</br>
+    C++ supports null pointer, which is a constant with a value of zero defined in several standard libraries.</br></br>
+
+	Pointer Arithmetic</br>
+    There are four arithmetic operators that can be used on pointers: ++, --, +, -</br></br>
+
+	Pointers vs Arrays</br>
+    There is a close relationship between pointers and arrays.</br></br>
+
+	Array of Pointers</br>
+    You can define arrays to hold a number of pointers.</br></br>
+
+	Pointer to Pointer</br>
+    C++ allows you to have pointer on a pointer and so on.</br></br>
+
+	Passing Pointers to Functions</br>
+    Passing an argument by reference or by address both enable the passed </br>
+	argument to be changed in the calling function by the called function.</br></br>
+
+	Return Pointer from Functions</br>
+    C++ allows a function to return a pointer to local variable,</br> 
+	static variable and dynamically allocated memory as well.</br></br>
+	</table>
+	</p>
+	</div>
+	</body>
