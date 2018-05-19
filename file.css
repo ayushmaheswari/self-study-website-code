@@ -80,7 +80,7 @@ color:white;
 	position:absolute;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
 	#menu
 {
 	opacity:.7;
@@ -95,7 +95,7 @@ list-style:none;
 #menu ul li
 {
 background-color:#d1b3ff;
-width:181.86px;
+width:100%;
 height:50px;
 line-height:50px;
 text-align:center;
@@ -127,7 +127,7 @@ color:white;
 }
   #menu ul ul ul
 {
-	margin-left:181.86px;
+	margin-left:100%;
 	margin-top:-50px;
 	position:absolute;
 }
