@@ -100,7 +100,7 @@ height:50px;
 line-height:50px;
 text-align:center;
 float:left;
-font-size:20px;
+font-size:18px;
 position:relative;
 }
 #menu ul li a
@@ -129,7 +129,7 @@ color:white;
 {
 	margin-left:100%;
 	margin-top:-50px;
-	position:absolute;
+	position:relative;
 }
   }
 
